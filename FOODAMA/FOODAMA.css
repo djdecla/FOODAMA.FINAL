@@ -1,0 +1,3396 @@
+body {
+  background-color: #FBF7EC;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #FBF7EC;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1; 
+}
+
+.search-bar {
+  width: 190px;
+  height: 34px; 
+  object-fit: cover; 
+  margin-left: auto; 
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+}
+.navigation a.active {
+color: #D46A6A; 
+
+}
+
+.center-logo {
+  display: flex; 
+justify-content: center;
+align-items: center; 
+height: 150px; 
+margin: 20px 0; 
+  margin-top: 0; 
+  padding-top: 20px; 
+}
+.centered-logo {
+  width: 200px; 
+  height: 170px; 
+  object-fit: contain; 
+}
+.hero {
+display: flex;
+padding: 50px 20px;
+justify-content: flex-start;
+align-items: flex-start;
+background-image: url('<?php echo get_template_directory_uri(); ?>/iimages/fondecran.png');
+height: 100%;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+color: #FBF7EC;
+z-index: 1;
+margin-bottom: 50px;
+}
+
+.hero-title {
+font-family: 'Josefin Slab', serif;
+font-size: 48px;
+font-weight: 400;
+color: #FBF7EC;
+text-align: left;
+margin-bottom: 20px;
+}
+
+.hero-image {
+display: block;
+width: 1282px;
+height: 837px;
+margin: 0 auto;
+object-fit: cover;
+}
+
+.hero-before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+z-index: 0;
+}
+
+.hero-content {
+position: relative;
+z-index: 1;
+}
+
+.hero-content h1 {
+font-family: 'Josefin Slab', serif;
+font-size: 2rem;
+line-height: 1.1;
+padding: 20px;
+font-size: 48px;
+color: #FBF7EC;
+}
+
+.hero-content p {
+font-family: 'Josefin Slab', serif;
+margin: 10px 0;
+font-size: 20px;
+padding: 20px;
+color: #FBF7EC;
+}
+
+.hero-buttons button {
+margin-right: 10px;
+padding: 10px 20px;
+background-color: transparent;
+color: #FBF7EC;
+border: 2px solid #FBF7EC;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.search-form button {
+  background-color: #FBF7EC; /* Couleur beige pour le fond du bouton */
+  border: none;
+  color: #6C8B73;
+}
+
+/* Responsive Design */
+
+/* Tablettes */
+@media (max-width: 992px) {
+.hero {
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+    padding: 30px 15px; /* Réduit les paddings */
+}
+
+.hero-title {
+    font-size: 36px; /* Réduit la taille du titre */
+    text-align: center; /* Centre le texte */
+}
+
+.hero-content h1 {
+    font-size: 36px; /* Réduit la taille des titres */
+}
+
+.hero-content p {
+    font-size: 16px; /* Réduit la taille du paragraphe */
+    text-align: center; /* Centre le texte */
+    padding: 10px;
+}
+
+.hero-buttons {
+    flex-direction: column; /* Empile les boutons en colonne */
+    gap: 15px; /* Ajoute de l'espacement entre les boutons */
+    align-items: center; /* Centre les boutons */
+}
+}
+
+/* Téléphones */
+@media (max-width: 768px) {
+.hero {
+    padding: 20px; /* Réduit encore les paddings */
+}
+
+.hero-title {
+    font-size: 28px; /* Taille réduite pour les téléphones */
+}
+
+.hero-content h1 {
+    font-size: 28px; /* Taille encore plus petite */
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: 14px; /* Taille du paragraphe adaptée aux mobiles */
+}
+
+.hero-buttons button {
+    padding: 8px 16px; /* Réduit la taille des boutons */
+    font-size: 14px; /* Réduit la taille du texte dans les boutons */
+}
+}
+/* Navigation principale */
+.navbar-nav {
+display: flex;
+gap: 20px;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav-link {
+font-size: 16px;
+text-decoration: none;
+color: #6C8B73;
+transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+color: #D46A6A;
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 992px) {
+.navbar-nav {
+    flex-direction: column; /* Les liens passent en colonne */
+    gap: 10px; /* Espacement réduit */
+    align-items: flex-start; /* Aligne les liens à gauche */
+}
+
+.nav-link {
+    font-size: 14px; /* Texte réduit */
+}
+}
+
+.navbar-brand {
+font-size: 18px;
+}
+
+.navbar-toggler {
+border: none;
+}
+
+
+/* Conteneur principal de la barre d'information */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 60px; /* Hauteur par défaut */
+  box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+}
+
+/* Conteneur du logo et du texte FOODAMA */
+.logo-container {
+  display: flex; /* Aligne le logo et le texte FOODAMA horizontalement */
+  align-items: center; /* Centre verticalement le logo et le texte */
+  gap: 10px; /* Espacement entre le logo et le texte */
+}
+
+/* Logo (image) */
+.small-logo {
+  width: 40px; /* Largeur fixe */
+  height: auto; /* Conserve la proportion de l'image */
+  display: block; /* Empêche les espaces supplémentaires autour de l'image */
+}
+
+/* Responsive Design */
+
+/* Tablettes */
+@media (max-width: 992px) {
+  .site-header {
+      padding: 10px 15px; /* Réduit le padding */
+      height: 55px; /* Réduit la hauteur pour les tablettes */
+  }
+
+  .logo-container {
+      gap: 8px; /* Réduit l'espacement entre le logo et le texte */
+  }
+
+  .small-logo {
+      width: 35px; /* Réduit la largeur du logo */
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .site-header {
+      flex-direction: column; /* Passe en colonne pour les petits écrans */
+      height: auto; /* Laisse la hauteur s'adapter au contenu */
+      padding: 10px; /* Réduit le padding global */
+      text-align: center; /* Centre le contenu */
+  }
+
+  .logo-container {
+      justify-content: center; /* Centre le logo et le texte */
+      gap: 6px; /* Réduit davantage l'espacement */
+  }
+
+  .small-logo {
+      width: 30px; /* Réduit encore la largeur du logo */
+  }
+}
+
+
+/* Texte FOODAMA */
+.site-title {
+  font-family: 'Josefin Slab', serif; /* Police définie */
+  font-size: 16px; /* Taille du texte */
+  font-weight: bold; /* Texte en gras */
+  color: #6C8B73; /* Couleur du texte */
+  margin: 0; /* Supprime les marges par défaut */
+  line-height: 1; /* Ajuste l'interligne */
+}
+
+
+.navigation {
+  margin: 0 auto; /* Centre horizontalement la navigation */
+}
+
+.navigation ul {
+  list-style: none; /* Supprime les puces */
+  display: flex; /* Affiche les liens sur une seule ligne */
+  gap: 20px; /* Espacement entre les liens */
+  padding: 0; /* Supprime les marges internes */
+  margin: 0; /* Supprime les marges externes */
+}
+
+.navigation a {
+  text-decoration: none; /* Supprime le soulignement des liens */
+  font-size: 16px;
+  color: #6C8B73; /* Couleur des liens */
+}
+
+
+/* Conteneur principal de la mission */
+.mission {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 40px 80px;
+background-color: #FBF7EC;
+gap: 40px;
+}
+
+/* Image (150 000 repas sauvés) */
+.mission-image {
+width: 436px;
+height: 399px;
+object-fit: cover;
+}
+
+/* Titre principal : Notre mission */
+.mission-text .mission-title {
+font-family: 'Josefin Slab', serif;
+font-size: 26px;
+font-weight: bold;
+color: #D46A6A;
+margin-bottom: 5px !important;
+}
+
+/* Sous-titre : RIEN N'EST PERDU ! */
+.mission-text .mission-subtitle {
+font-family: 'Josefin Slab', cursive;
+font-size: 30px;
+text-transform: uppercase;
+color: #6C8B73;
+margin-bottom: 10px !important;
+}
+
+/* Description */
+.mission-text .mission-description {
+font-family: 'Josefin Sans', sans-serif;
+font-size: 20px;
+font-weight: 300;
+line-height: 1.4;
+color: #6C8B73;
+margin-bottom: 10px !important;
+}
+
+/* Bouton */
+.mission-button {
+display: inline-block;
+padding: 10px 20px;
+background-color: #D46A6A;
+color: #FBF7EC;
+border: none;
+border-radius: 5px;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 17px;
+cursor: pointer;
+text-align: center;
+}
+
+.mission-button:hover {
+background-color: #C15454;
+}
+
+/* Responsive Design */
+
+/* Tablettes */
+@media (max-width: 992px) {
+.mission {
+    flex-direction: column; /* Passe en colonne */
+    padding: 30px 40px; /* Réduit le padding */
+    gap: 20px; /* Réduit l'espacement entre les éléments */
+}
+
+.mission-image {
+    width: 350px; /* Réduit la taille de l'image */
+    height: auto; /* Garde les proportions */
+}
+
+.mission-text {
+    text-align: center; /* Centre le texte */
+}
+
+.mission-text .mission-title {
+    font-size: 20px; /* Réduit la taille du titre */
+}
+
+.mission-text .mission-subtitle {
+    font-size: 20px; /* Réduit la taille du sous-titre */
+}
+
+.mission-text .mission-description {
+    font-size: 18px; /* Réduit la taille de la description */
+}
+
+.mission-button {
+    font-size: 16px; /* Réduit la taille du bouton */
+    padding: 8px 16px; /* Réduit le padding du bouton */
+}
+}
+
+/* Téléphones */
+@media (max-width: 768px) {
+.mission {
+    padding: 20px; /* Réduit encore le padding */
+}
+
+.mission-image {
+    width: 100%; /* L'image occupe toute la largeur */
+    max-width: 300px; /* Taille maximale */
+}
+
+.mission-text {
+    text-align: center; /* Centre le texte */
+}
+
+.mission-text .mission-title {
+    font-size: 20px; /* Réduit encore la taille du titre */
+}
+
+.mission-text .mission-subtitle {
+    font-size: 22px; /* Réduit encore la taille du sous-titre */
+}
+
+.mission-text .mission-description {
+    font-size: 16px; /* Taille encore plus petite */
+}
+
+.mission-button {
+    font-size: 14px; /* Taille réduite */
+    padding: 8px 14px; /* Ajuste le padding */
+}
+}
+
+
+/* Section titres */
+.section-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400; /* Regular */
+  color: #D46A6A; /* Rouge doux */
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 16px; /* Taille réduite sur mobile */
+  }
+}
+
+/* Style pour le sous-titre des cartes */
+.offer-subtitle {
+  font-family: 'Josefin Slab', serif; /* Remplace par la police que tu veux */
+  font-size: 16px; /* Taille du texte */
+  font-weight: 400; /* Regular */
+  color: #6C8B73; /* Couleur verte */
+  line-height: 1.4; /* Espacement entre les lignes */
+  margin-bottom: 10px; /* Espacement sous le texte */
+}
+@media (max-width: 768px) {
+.offer-subtitle, .offer-time {
+    font-size: 12px; /* Taille encore plus petite sur mobile */
+}
+}
+
+/* Grid pour les cartes */
+.offers-grid,
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+  gap: 20px; /* Espacement entre les cases */
+  padding: 20px 0; /* Espacement autour */
+}
+/* Section "Prêt de chez vous", "Supermarchés", "Fastfood", et "Restaurants" */
+
+
+@media (max-width: 992px) {
+.offers-grid, .recommendations-grid {
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les tablettes */
+}
+}
+
+@media (max-width: 768px) {
+.offers-grid, .recommendations-grid {
+    grid-template-columns: 1fr; /* Une colonne pour les mobiles */
+}
+}
+
+
+/* Cartes */
+.offer-card,
+.recommendation-card {
+  background-color: #FBF7EC; /* Fond beige */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre discrète */
+  overflow: hidden; /* Pour contenir les images */
+  text-align: left; /* Texte aligné à gauche */
+  padding: 15px;
+}
+
+/* Images dans les cartes */
+.offer-image {
+  width: 100%; /* L'image occupe toute la largeur de la carte */
+  height: 150px; /* Hauteur fixe */
+  object-fit: cover; /* Ajuste l'image pour remplir sans distorsion */
+  margin-bottom: 10px; /* Espacement avec le texte */
+}
+
+/* Titres dans les cartes */
+.offer-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #D46A6A;
+  margin: 0; /* Supprime les marges */
+  padding: 0; /* Supprime les paddings */
+  line-height: 1.2; /* Réduit l’interligne */
+}
+
+/* Sous-titre dans les cartes */
+.offer-subtitle {
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6C8B73;
+  margin: 5px 0 0; /* Supprime les marges sauf un petit espace au-dessus */
+  line-height: 1.2; /* Réduit l’interligne */
+}
+
+/* Texte de collecte */
+.offer-time {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  color: #6C8B73;
+  margin: 5px 0 10px; /* Ajuste les marges pour plus de contrôle */
+  line-height: 1.2; /* Réduit l’interligne */
+}
+
+
+/* Bouton Commander */
+.offer-button {
+  display: block;
+  width: 100%; /* Bouton occupe toute la largeur de la carte */
+  padding: 10px 0; /* Taille du bouton */
+  background-color: #6C8B73; /* Vert doux */
+  color: #FBF7EC; /* Texte blanc */
+  border: none;
+  border-radius: 5px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.offer-button-link {
+  color: #FBF7EC; /* Texte blanc */
+}
+
+/* Conteneur pour le bouton cœur */
+.offer-heart-container {
+display: flex;
+justify-content: flex-end; /* Aligne le cœur à droite */
+align-items: center;
+margin-top: -10px; /* Ajuste la position verticale */
+}
+
+/* Bouton cœur */
+.heart-button {
+background: none;
+border: none;
+cursor: pointer;
+padding: 5px;
+outline: none;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease;
+}
+
+.heart-button:hover {
+transform: scale(1.1); /* Agrandit légèrement au survol */
+}
+/* État par défaut (contour) */
+.heart-icon {
+width: 24px;
+height: 24px;
+fill: none; /* Aucun remplissage par défaut */
+stroke: #D46A6A; /* Contour rose */
+stroke-width: 2px;
+cursor: pointer;
+transition: fill 0.3s ease;
+}
+
+/* État rempli */
+.heart-icon.filled {
+fill: #D46A6A; /* Remplissage rose */
+stroke: none; /* Supprime le contour */
+}
+/* Conteneur pour "Panier surprise" et le cœur */
+.offer-subtitle-container {
+display: flex; /* Active Flexbox */
+justify-content: space-between; /* Espace entre les éléments */
+align-items: center; /* Aligne verticalement au centre */
+margin-bottom: 10px; /* Espacement sous le conteneur */
+}
+
+
+@media (max-width: 992px) {
+/* Sur tablettes : Ajustement de la taille du cœur */
+.heart-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.offer-heart-container {
+    margin-top: -8px; /* Ajuste légèrement l'alignement */
+}
+}
+
+@media (max-width: 768px) {
+/* Sur mobiles : Réduction de la taille */
+.heart-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.offer-heart-container {
+    margin-top: -6px; /* Plus compact pour mobile */
+}
+}
+
+@media (max-width: 768px) {
+  .offer-button-link {
+      font-size: 14px; /* Taille réduite sur mobile */
+      padding: 8px 12px;
+  }
+}
+
+.offer-button:hover {
+  background-color: #597660; /* Couleur légèrement plus sombre */
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 992px) {
+.hero-title {
+    font-size: 2.5rem; /* Réduit la taille des titres */
+    text-align: center; /* Centre le texte */
+}
+
+.hero-buttons {
+    flex-direction: column; /* Les boutons passent en colonne */
+    gap: 15px; /* Ajoute un espacement entre eux */
+    align-items: center; /* Centre les boutons */
+}
+
+.offers-grid,
+.recommendations-grid {
+    grid-template-columns: repeat(2, 1fr); /* Affiche 2 colonnes */
+}
+
+.mission-text {
+    text-align: center; /* Centre le texte de la mission */
+}
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+.hero-title {
+    font-size: 2rem; /* Réduit encore la taille des titres */
+    padding: 0 10px; /* Ajoute un padding pour éviter que le texte touche les bords */
+}
+
+.hero-content {
+    padding: 20px; /* Ajoute de l'espace autour du contenu */
+}
+
+.hero-buttons {
+    flex-direction: column; /* Colonne pour les boutons */
+    gap: 10px; /* Réduit l'espacement entre les boutons */
+    align-items: center; /* Centre les boutons */
+}
+
+.offers-grid,
+.recommendations-grid {
+    grid-template-columns: 1fr; /* Affiche une seule colonne */
+}
+
+.mission-stats {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.mission-description {
+    font-size: 14px; /* Réduit la taille du texte de la mission */
+}
+
+.offer-card,
+.recommendation-card {
+    padding: 10px; /* Réduit les marges des cartes */
+}
+}
+
+/* Footer principal */
+.footer-container {
+  background-color: #6C8B73; /* Couleur du fond */
+  color: #FBF7EC; /* Couleur du texte */
+  width: 100%; /* Largeur complète */
+  padding: 30px 0; /* Espacement vertical */
+  position: relative; /* Pour positionner les icônes en haut à droite */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre tout horizontalement */
+}
+
+/* Contenu principal */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto 1fr 1fr; /* Cinq colonnes */
+  align-items: start; /* Aligne en haut */
+  width: 90%; /* Largeur totale */
+  max-width: 1280px; /* Limite maximale */
+  gap: 20px; /* Espacement entre colonnes */
+}
+
+/* Colonne gauche */
+.footer-left {
+  text-align: left;
+}
+
+.footer-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 13px; /* Taille du texte en majuscule */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  line-height: 1.4; /* Interligne pour les trois lignes */
+}
+
+.footer-link {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  color: #FBF7EC;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Colonne 2 : Inscrire son commerce */
+.footer-secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacement entre les liens */
+  text-align: left; /* Alignement à gauche */
+}
+
+/* Logo centré */
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  width: 136px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Colonne droite : Les plus recherchés */
+.footer-right {
+  text-align: left; /* Alignement à gauche */
+}
+
+.footer-light {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px; /* Taille standard */
+  font-weight: 300; /* Police Light */
+  color: #FBF7EC;
+  margin: 5px 0;
+}
+
+.footer-social {
+  position: absolute;
+  top: 10px; /* Ajustez pour le décalage vertical */
+  right: 20px; /* Ajustez pour le décalage horizontal */
+}
+
+
+.social-icon {
+  width: 250px; /* Augmentez la largeur pour agrandir */
+  height: auto; /* Garde les proportions de l'image */
+  object-fit: contain; /* Évite la déformation */
+}
+
+/************** STYLES POUR LA PAGE "PARCOURIR" **************/
+
+/* Section Parcourir Hero */
+
+.parcourir-hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.parcourir-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.parcourir-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Josefin Slab', serif;
+  font-size: 36px;
+  color: #FBF7EC;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}  
+
+/* Ajouter un effet d'opacité sombre sur l'image */
+.parcourir-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Couleur noire avec opacité */
+  z-index: 1; /* Place l'overlay au-dessus de l'image mais en dessous du texte */
+}
+
+.parcourir-image img {
+  position: relative;
+  z-index: 0; /* Place l'image en dessous de l'overlay sombre */
+}
+
+.parcourir-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Josefin Slab', serif;
+  font-size: 36px;
+  color: #FBF7EC;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2; /* Place le texte au-dessus de l'overlay sombre */
+}
+
+
+/***** carte css***/
+
+/* Conteneur principal */
+.pointrelais-container {
+position: relative;
+width: 100%;
+height: auto;
+}
+
+/* Image d'arrière-plan */
+.pointrelais-bg-image {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -1;
+}
+
+/* Rectangle superposé */
+.pointrelais-overlay {
+position: relative;
+margin: 50px auto;
+max-width: 900px;
+background-color: #FBF7EC;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+z-index: 1;
+}
+
+/* Boutons */
+.carte-buttons {
+display: flex;
+justify-content: center;
+gap: 20px;
+margin-bottom: 20px;
+}
+
+.carte-button {
+background-color: #D46A6A;
+color: #FBF7EC;
+font-family: 'Josefin Slab', serif;
+padding: 10px 20px;
+font-size: 16px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.carte-button:hover {
+background-color: #C15454;
+}
+
+/* Carte interactive */
+.carte-map {
+text-align: center;
+margin: 20px auto;
+}
+
+.carte-title {
+font-size: 24px;
+color: #6C8B73;
+margin-bottom: 20px;
+font-family: 'Josefin Slab', serif;
+}
+
+
+/*****commentaires*/  
+
+/* Section de l'image avec rectangle superposé */
+.background-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.background-container img {
+  width: 100%;
+  height: 1150px;
+  object-fit: cover;
+  position: absolute;
+  z-index: -2;
+}
+
+.overlay-rectangle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 519px;
+  height: 1170px;
+  background-color: #FBF7EC;
+  z-index: -1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenu principal */
+.main-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Titre principal */
+.comments-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #6C8B73;
+  margin-bottom: 10px; /* Réduction de l'espace sous le titre principal */
+}
+
+/* Résumé des avis */
+.comments-summary {
+  width: 60%;
+  max-width: 400px;
+  margin: 0 auto 30px; /* Réduction de l'espace global */
+  text-align: center;
+}
+
+.summary-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: #6C8B73;
+  margin-bottom: 10px; /* Réduction de l'espace sous le titre résumé */
+}
+
+.ratings-summary li {
+  list-style: none;
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
+  color: #6C8B73;
+  margin: 3px 0; /* Réduction de l'écart entre les lignes du résumé */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ratings-bar {
+  background-color: #D46A6A;
+  height: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  flex: 1;
+}
+
+.average-rating {
+  font-family: 'Josefin Slab', serif;
+  font-size: 18px;
+  color: #6C8B73;
+  margin-top: 5px; /* Réduction de l'espace au-dessus de la note moyenne */
+}
+
+/* Donner un avis */
+.give-review {
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.review-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #6C8B73;
+  margin-bottom: 2px; /* Réduit l'espace entre le titre et le sous-titre */
+  line-height: 1.1; /* Réduit l'interligne */
+}
+
+.review-subtitle {
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
+  color: #6C8B73;
+  margin-top: 0; /* Supprime l'espace en haut du sous-titre */
+  margin-bottom: 10px; /* Ajuste l'espace en dessous */
+  line-height: 1.1; /* Réduit l'interligne */
+}
+
+
+.star-rating {
+  font-size: 24px;
+  color: #D46A6A;
+  margin-bottom: 15px; /* Réduction de l'espace sous les étoiles */
+}
+
+.review-textarea {
+  width: 60%;
+  max-width: 400px; /* Même largeur que les commentaires des utilisateurs */
+  height: 80px; /* Réduction de la hauteur */
+  padding: 10px;
+  font-family: 'Josefin Slab', serif;
+  font-size: 14px;
+  border: 1px solid #6C8B73;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Réduction de l'espace sous la zone de texte */
+  resize: none;
+  display: block;
+  margin: 0 auto;
+  background-color: #FBF7EC;
+  
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #D46A6A;
+  color: #FBF7EC;
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Augmente l'espace entre le bouton et la zone de texte */
+  margin-bottom: 0px; /* Garde un espace sous le bouton */
+}
+
+.submit-button:hover {
+  background-color: #C15454;
+}
+
+
+/* Liste des avis */
+.user-reviews {
+  margin-top: 10px; /* Ajuste directement l'écart au-dessus de "Vos avis" */
+  text-align: center;
+}
+
+.reviews-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #6C8B73;
+  margin-bottom: 15px; /* Réduction de l'espace sous le titre */
+}
+
+.review-card {
+  width: 60%;
+  max-width: 400px;
+  margin: 0 auto 15px; /* Réduction de l'écart entre les cartes */
+  padding: 15px;
+  background-color: #FBF7EC;
+  border: 1px solid #6C8B73;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.review-user {
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6C8B73;
+  margin-bottom: 3px; /* Réduction de l'écart sous le nom de l'utilisateur */
+}
+
+.review-text {
+  font-family: 'Josefin Slab', serif;
+  font-size: 14px;
+  color: #6C8B73;
+  line-height: 1.3; /* Réduction de l'espacement entre les lignes */
+}
+
+/***** Responsive Design pour commentaires.php *****/
+
+/* Section de l'image avec rectangle superposé */
+@media (max-width: 768px) {
+.background-container img {
+    height: auto; /* Laisse l'image s'ajuster automatiquement */
+}
+
+.overlay-rectangle {
+    width: 90%; /* Réduit la largeur pour les petits écrans */
+    height: 100%; /* Ajuste automatiquement la hauteur */
+}
+}
+
+/* Contenu principal */
+@media (max-width: 768px) {
+.main-content {
+    padding: 10px; /* Réduit le padding pour les petits écrans */
+}
+
+.comments-summary {
+    width: 90%; /* Prend presque toute la largeur de l'écran */
+}
+
+.review-textarea {
+    width: 90%; /* Adapte la largeur de la zone de texte */
+}
+
+.review-card {
+    width: 90%; /* Adapte la largeur des cartes des avis */
+}
+}
+
+/* Titre principal */
+@media (max-width: 768px) {
+.comments-title {
+    font-size: 18px; /* Réduit légèrement la taille de la police */
+}
+
+.summary-title {
+    font-size: 16px; /* Réduction pour les titres des résumés */
+}
+
+.review-title {
+    font-size: 18px; /* Taille réduite pour les petits écrans */
+}
+
+.review-subtitle {
+    font-size: 14px; /* Taille réduite pour les sous-titres */
+}
+}
+
+/* Ratings et étoiles */
+@media (max-width: 768px) {
+.ratings-summary li {
+    font-size: 14px; /* Réduction pour les textes des étoiles */
+}
+
+.star-rating {
+    font-size: 20px; /* Réduit la taille des étoiles */
+}
+}
+
+/* Formulaire */
+@media (max-width: 768px) {
+.submit-button {
+    font-size: 14px; /* Réduit légèrement la taille du bouton */
+    padding: 8px 15px; /* Ajuste les dimensions */
+}
+}
+
+/* Liste des avis */
+@media (max-width: 768px) {
+.reviews-title {
+    font-size: 18px; /* Ajuste la taille du titre */
+}
+
+.review-user {
+    font-size: 14px; /* Ajuste la taille des noms des utilisateurs */
+}
+
+.review-text {
+    font-size: 12px; /* Réduit la taille des textes des avis */
+}
+}
+
+/* Footer */
+@media (max-width: 768px) {
+.footer-container {
+    padding: 15px; /* Réduit le padding pour les petits écrans */
+}
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px; /* Réduction de l'écart entre les colonnes du footer */
+}
+
+.footer-column {
+  text-align: left;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FBF7EC;
+  margin-bottom: 5px; /* Réduction de l'écart sous les titres */
+}
+
+.footer-link {
+  display: block;
+  font-family: 'Josefin Slab', serif;
+  font-size: 14px;
+  color: #FBF7EC;
+  text-decoration: none;
+  margin-bottom: 3px; /* Réduction de l'écart entre les liens */
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-social img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+/****** Page Compte ******/
+
+/* Section principale */
+.compte-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #FBF7EC;
+  text-align: center;
+}
+
+.compte-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 28px;
+  color: #D46A6A;
+  margin-bottom: 20px;
+    text-align: left; /* Aligne le texte à gauche */
+    margin-left: 0; /* Supprime tout éventuel décalage */
+    line-height: 1.5; /* Ajuste l'espacement entre les lignes si nécessaire */
+margin-left: 80px; /* Décale l'image vers la droite (ajustez cette valeur pour augmenter l'écart) */
+
+
+}
+.site-center {
+display: flex; /* Active Flexbox */
+justify-content: center; /* Centre horizontalement */
+align-items: center; /* Centre verticalement */
+height: 100vh; /* Hauteur égale à 100% de la fenêtre */
+text-align: center; /* Texte centré au cas où */
+}
+
+
+.compte-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+margin-left: 80px; /* Décale l'image vers la droite (ajustez cette valeur pour augmenter l'écart) */
+
+}
+
+.compte-button {
+  background-color: #D46A6A;
+  color: #FBF7EC;
+  font-family: 'Josefin Slab', serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.compte-button:hover {
+  background-color: #C15454;
+}
+
+.compte-logo {
+display: flex; 
+justify-content: center; 
+align-items: center; 
+gap: 10px; 
+
+}
+
+.logo-principal {
+width: 700px;
+height: 150px;
+margin-right: 80px; /* Décale l'image vers la droite (ajustez cette valeur pour augmenter l'écart) */
+}
+
+/* Ajuste les images des sections Responsibility, Commande et Pourquoi choisir */
+
+/* Images des sections Responsibility (image-vert et image-rose) */
+.image-vert {
+  width: 250px; /* Diminue la largeur de l'image */
+  height: auto; /* Conserve les proportions */
+  margin-left: 100px; /* Ajoute plus de padding depuis la gauche */
+}
+
+.image-rose {
+width: 250px; /* Diminue la largeur de l'image */
+height: auto;
+margin-left: -10px; 
+}
+
+.responsibility-text {
+max-width: 400px; /* Assure que le texte ne s'étend pas trop */
+font-family: 'Josefin Slab', serif;
+color: #6C8B73;
+margin-right: 30px; /* Ajoute une marge à droite du texte */
+padding-right: 50px; /* Ajoute un padding interne entre le texte et la bordure droite */
+}
+.commande-content {
+display: flex; /* Assure que les images restent en ligne */
+justify-content: space-between; /* Espace égal entre les images */
+align-items: center; /* Aligne les images verticalement */
+padding-right: 80px; /* Ajoute un espace à droite du conteneur */
+padding-left: 20px; /* Facultatif : espace à gauche pour équilibrer */
+}
+
+/* Image de gauche */
+.choisir-image-left {
+width: 180px; /* Largeur spécifique */
+height: auto; /* Maintient les proportions */
+margin-left: 20px; /* Espacement par rapport à la gauche */
+}
+
+/* Image du centre */
+.choisir-image-center {
+width: 150px; /* Largeur spécifique */
+height: auto; /* Maintient les proportions */
+margin: 0 20px; /* Espacement horizontal uniformisé */
+}
+
+/* Image de droite */
+.choisir-image-right {
+width: 180px; /* Largeur spécifique */
+height: auto; /* Maintient les proportions */
+margin-right: 10px; /* Espacement par rapport à la droite */
+}
+
+
+
+/* Images des sections Pourquoi choisir Foodama (image-vélo) */
+.vélo-image {
+  width: 200px; /* Diminue la largeur de l'image */
+  height: auto; /* Conserve les proportions */
+  margin-left: 100px; /* Ajoute du padding depuis la gauche */
+  margin-right: 30px; /* Ajoute du padding depuis la droite */
+}
+
+/* Section responsabilité */
+.responsibility-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #FBF7EC;
+}
+.responsibility-subtitle {
+color: #D46A6A;
+font-family: 'Josefin Slab', serif;
+
+}
+.responsibility-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 24px;
+  color: #D46A6A;
+  margin-bottom: 10px;
+}
+
+.responsibility-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.responsibility-image {
+  width: 300px;
+  height: auto;
+}
+
+.responsibility-text {
+  max-width: 400px;
+  font-size: 22px;
+  font-family: 'Josefin Slab', serif;
+  color: #6C8B73;
+margin-right: 70px; /* Décale l'image vers la droite (ajustez cette valeur pour augmenter l'écart) */
+
+}
+
+/* Section commande */
+.commande-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.commande-subtitle {
+color: #D46A6A;
+font-family: 'Josefin Slab', serif;
+}
+
+
+.commande-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 24px;
+  color: #D46A6A;
+  
+  margin-bottom: 10px;
+}
+
+.commande-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.commande-text {
+  max-width: 400px;
+  font-size: 22px;
+  font-family: 'Josefin Slab', serif;
+  color: #6C8B73;
+  margin-left: 100px; /* Ajoute un padding depuis la droite */
+}
+
+.commande-image {
+  width: 300px;
+  height: auto;
+}
+/***** Responsive Design pour compte.php *****/
+
+/* Section principale */
+@media (max-width: 768px) {
+.compte-hero {
+    flex-direction: column; /* Empile les éléments verticalement */
+    text-align: center; /* Centre le contenu pour les petits écrans */
+    padding: 20px;
+}
+
+.compte-title {
+    font-size: 20px; /* Réduction de la taille du texte */
+    margin-left: 0; /* Supprime la marge à gauche */
+    text-align: center; /* Centre le titre */
+}
+
+.compte-buttons {
+    flex-direction: column; /* Empile les boutons */
+    gap: 10px; /* Réduction de l'espace entre les boutons */
+    margin-left: 0; /* Supprime la marge à gauche */
+    align-items: center; /* Centre les boutons */
+}
+
+.compte-logo {
+    flex-direction: column; /* Empile les éléments */
+    margin-right: 0; /* Supprime la marge à droite */
+}
+
+.logo-principal {
+    width: 100%; /* L'image occupe toute la largeur */
+    height: auto; /* Conserve les proportions */
+}
+}
+
+/* Images des sections Responsibility, Commande et Pourquoi choisir */
+@media (max-width: 768px) {
+.image-vert,
+.image-rose,
+.vélo-image {
+    width: 100px; /* Réduction de la taille des images */
+    margin-left: 0; /* Supprime les marges inutiles */
+    margin-right: 0;
+}
+
+.responsibility-content,
+.commande-content {
+    flex-direction: column; /* Empile les images et le texte */
+    align-items: center; /* Centre le contenu */
+    gap: 20px; /* Ajoute un espacement entre les éléments */
+}
+
+.responsibility-text,
+.commande-text {
+    max-width: 90%; /* Limite la largeur pour les petits écrans */
+    text-align: center; /* Centre le texte */
+    margin: 0 auto; /* Centre horizontalement */
+    padding-right: 0; /* Supprime le padding à droite */
+}
+}
+
+/* Section des images (gauche, centre, droite) */
+@media (max-width: 768px) {
+.choisir-image-left,
+.choisir-image-center,
+.choisir-image-right {
+    width: 80px; /* Réduction des tailles des images */
+    margin: 10px 0; /* Ajoute un espacement entre les images */
+}
+
+.commande-content {
+    flex-direction: column; /* Empile les images */
+    align-items: center; /* Centre les éléments */
+}
+}
+
+/* Section responsabilité */
+@media (max-width: 768px) {
+.responsibility-title,
+.commande-title {
+    font-size: 18px; /* Réduction de la taille du titre */
+}
+
+.responsibility-subtitle,
+.commande-subtitle {
+    font-size: 16px; /* Réduction de la taille des sous-titres */
+}
+}
+
+/* Boutons */
+@media (max-width: 768px) {
+.compte-button {
+    font-size: 14px; /* Réduction de la taille des boutons */
+    padding: 8px 15px; /* Ajuste le padding interne */
+}
+}
+
+
+/* Section Pourquoi choisir Foodama */
+.choisir-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #FBF7EC;
+}
+
+.choisir-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 24px;
+  color: #D46A6A;
+  margin-bottom: 20px;
+}
+
+.choisir-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.choisir-text ul {
+  list-style-type: disc;
+  text-align: left;
+  font-size: 22px;
+  margin: 0 auto;
+  padding-left: 20px;
+  font-family: 'Josefin Slab', serif;
+  color: #6C8B73;
+margin-right: 100px; /* Décale l'image vers la droite (ajustez cette valeur pour augmenter l'écart) */
+
+}
+
+.choisir-image {
+  width: 300px;
+  height: auto;
+}
+
+/* Section finale */
+.final-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.final-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  color: #D46A6A;
+}
+
+
+/***** Page Se Connecter *****/
+
+/* Titre principal centré */
+.seconnecter-title {
+font-family: 'Josefin Sans', sans-serif;
+font-size: 24px;
+font-weight: 400;
+color: #6C8B73;
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* Section de connexion */
+.login-section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px; /* Espacement entre les champs */
+}
+
+/* Labels des champs */
+.login-label {
+font-family: 'Josefin Slab', serif;
+font-size: 15px;
+font-weight: bold;
+color: #D46A6A;
+margin-bottom: 5px;
+text-align: left;
+width: 254px; /* Aligne les labels avec les inputs */
+}
+
+/* Champs de texte */
+.login-input {
+width: 254px;
+height: 32px;
+padding: 5px;
+border: none;
+border-radius: 5px;
+background-color: #D7D3C9;
+font-family: 'Josefin Slab', serif;
+font-size: 14px;
+color: #6C8B73;
+}
+
+/* Bouton Se connecter */
+.login-button {
+padding: 10px 20px;
+background-color: #D46A6A;
+color: #FBF7EC;
+font-family: 'Josefin Slab', serif;
+font-size: 16px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+text-align: center;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+transition: background-color 0.3s;
+}
+
+.login-button:hover {
+background-color: #C15454;
+}
+
+/* Lien pour le bouton */
+.login-button-link {
+text-decoration: none;
+}
+/***** Responsive Design pour la page Se Connecter *****/
+
+/* Petits écrans (smartphones) */
+@media (max-width: 768px) {
+.seconnecter-title {
+  font-size: 20px; /* Réduction de la taille du titre */
+  margin-bottom: 15px; /* Réduction de l'espace sous le titre */
+}
+
+.login-section {
+  gap: 15px; /* Réduction de l'espacement entre les champs */
+}
+
+.login-label {
+  font-size: 14px; /* Réduction de la taille du texte */
+  width: auto; /* Permet au label de s'adapter à la largeur de l'écran */
+  text-align: center; /* Centre les labels */
+}
+
+.login-input {
+  width: 90%; /* Adapte la largeur à celle de l'écran */
+  height: 36px; /* Légère augmentation de la hauteur pour le confort */
+  font-size: 14px; /* Taille de texte réduite */
+  margin: 0 auto; /* Centre les champs de texte */
+}
+
+.login-button {
+  width: 90%; /* Le bouton occupe presque toute la largeur */
+  font-size: 15px; /* Réduction de la taille du texte */
+  padding: 12px; /* Ajuste le padding */
+}
+}
+
+/* Tablettes */
+@media (max-width: 992px) {
+.seconnecter-title {
+  font-size: 22px; /* Taille légèrement réduite */
+}
+
+.login-label {
+  font-size: 15px; /* Taille adaptée aux tablettes */
+}
+
+.login-input {
+  width: 80%; /* Champ plus large que sur mobile */
+}
+
+.login-button {
+  width: 80%; /* Bouton plus large */
+}
+}
+
+/***** Page Compte Connecté (Classes dédiées) *****/
+
+/* Conteneur principal avec arrière-plan */
+.background-container-compteconnecte {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  
+}
+
+/* Image d'arrière-plan */
+.background-image-compteconnecte {
+  width: 100%;
+  height: 600px; /* Hauteur par défaut pour les grands écrans */
+  object-fit: cover; /* Remplit l'espace sans déformer l'image */
+  position: absolute;
+  z-index: -2; /* Place l'image derrière tout */
+}
+
+/* Responsive Design */
+
+/* Tablettes */
+@media (max-width: 992px) {
+  .background-container-compteconnecte {
+      height: 350px; /* Réduit la hauteur pour les tablettes */
+      margin-bottom: 50px;
+      margin-bottom: 380px;
+  }
+
+  .background-image-compteconnecte {
+      height: 500px; /* Ajuste la hauteur de l'image */
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .background-container-compteconnecte {
+      height: 200px; /* Réduit encore plus la hauteur pour les mobiles */
+  }
+
+  .background-image-compteconnecte {
+      height: 400px; /* Ajuste encore la hauteur de l'image */
+  }
+}
+
+
+
+/* Contenu principal */
+.main-content-compteconnecte {
+position: relative;
+z-index: 1; /* Place le contenu au-dessus du rectangle */
+display: flex;
+justify-content: center; /* Centre le contenu horizontalement */
+align-items: center; /* Centre le contenu verticalement */
+height: 100%; /* Remplit tout le rectangle */
+}
+
+
+/* Conteneur global de la page */
+body, html {
+margin: 0;
+padding: 0;
+height: 100%; /* Assure que la hauteur occupe toute la fenêtre */
+display: flex;
+flex-direction: column; /* Rend les sections flexibles */
+}
+
+
+
+/* Footer toujours en bas */
+footer.footer-container {
+margin-top: auto; /* Pousse le footer tout en bas de la page */
+width: 100%; /* S'assure qu'il occupe toute la largeur */
+}
+/***** Page Compte Connecté - Styles Exclusifs *****/
+
+/* Conteneur principal */
+.compteconnecte-container {
+position: relative;
+text-align: center;
+}
+
+/* Image d'arrière-plan */
+.compteconnecte-bg-image {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+
+/* Rectangle superposé */
+.compteconnecte-overlay {
+position: absolute;
+top: 10%;
+left: 50%;
+transform: translateX(-50%);
+width: 600px;
+background-color: #FBF7EC;
+border-radius: 15px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+padding: 30px 20px;
+z-index: 10;
+}
+
+/* Titre principal et avatar */
+.compteconnecte-header {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+margin-bottom: 30px;
+}
+
+.compteconnecte-username {
+font-family: 'Josefin Slab', serif;
+font-size: 24px;
+color: #D46A6A;
+}
+
+.compteconnecte-avatar {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+object-fit: cover;
+}
+/* Conteneur des boutons Favoris et Commandes */
+.compteconnecte-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* Boutons transformés en liens cliquables */
+.compteconnecte-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background-color: #FBF7EC;
+  border: 1px solid #D46A6A;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none; /* Supprime la décoration du lien */
+  transition: transform 0.2s ease;
+}
+
+.compteconnecte-button:hover {
+  transform: scale(1.05);
+  background-color: #F3E8E8; /* Change légèrement le fond au survol */
+}
+
+/* Images dans les boutons */
+.compteconnecte-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+/* Texte sous les images */
+.compteconnecte-button-text {
+  font-family: 'Josefin Slab', serif;
+  color: #D46A6A;
+  font-size: 16px;
+}
+
+/* Ligne horizontale */
+.compteconnecte-divider {
+border: none;
+height: 1px;
+background-color: #D46A6A;
+margin: 20px 0;
+}
+
+/* Liens supplémentaires */
+.compteconnecte-links {
+display: flex;
+flex-direction: column;
+gap: 15px;
+align-items: center;
+}
+
+.compteconnecte-link {
+font-family: 'Josefin Slab', serif;
+color: #D46A6A;
+font-size: 16px;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+.compteconnecte-link:hover {
+color: #C15454;
+}
+
+/***** Responsive Design pour la Page Compte Connecté *****/
+
+/* Smartphones et petits écrans */
+@media (max-width: 768px) {
+.compteconnecte-overlay {
+  width: 90%; /* Réduit la largeur du rectangle */
+  padding: 20px 15px; /* Réduit le padding */
+  top: 15%; /* Ajuste la position */
+}
+
+.compteconnecte-username {
+  font-size: 20px; /* Réduit la taille du texte */
+}
+
+.compteconnecte-avatar {
+  width: 50px; /* Réduit la taille de l'avatar */
+  height: 50px;
+}
+
+.compteconnecte-buttons {
+  flex-direction: column; /* Empile les boutons verticalement */
+  gap: 15px; /* Augmente l'espacement entre les boutons */
+}
+
+.compteconnecte-button {
+  width: 100%; /* Les boutons occupent toute la largeur */
+  height: 100px; /* Réduit la hauteur */
+  flex-direction: row; /* Icone et texte alignés horizontalement */
+  gap: 10px; /* Espacement entre l'icône et le texte */
+  justify-content: flex-start; /* Aligne les éléments à gauche */
+}
+
+.compteconnecte-icon {
+  width: 40px; /* Réduit la taille de l'icône */
+  height: 40px;
+}
+
+.compteconnecte-button-text {
+  font-size: 14px; /* Réduit la taille du texte */
+}
+
+.compteconnecte-links {
+  gap: 10px; /* Réduit l'espacement entre les liens */
+}
+
+.compteconnecte-link {
+  font-size: 14px; /* Réduit la taille des liens */
+}
+}
+
+/* Tablettes (écrans moyens) */
+@media (max-width: 992px) {
+.compteconnecte-overlay {
+  width: 80%; /* Ajuste la largeur pour les tablettes */
+  top: 12%; /* Ajuste la position */
+}
+
+.compteconnecte-buttons {
+  flex-wrap: wrap; /* Permet aux boutons de passer sur deux lignes si nécessaire */
+  gap: 15px;
+}
+
+.compteconnecte-button {
+  width: 45%; /* Les boutons prennent environ la moitié de la largeur */
+  height: 100px; /* Ajuste la hauteur */
+}
+
+.compteconnecte-icon {
+  width: 45px; /* Taille intermédiaire de l'icône */
+  height: 45px;
+}
+
+.compteconnecte-link {
+  font-size: 15px; /* Ajuste la taille des liens */
+}
+}
+
+/* Grands écrans (au-dessus de 992px) */
+@media (min-width: 992px) {
+.compteconnecte-overlay {
+  width: 600px; /* Largeur par défaut */
+}
+
+.compteconnecte-buttons {
+  gap: 20px; /* Espacement plus large entre les boutons */
+}
+
+.compteconnecte-button {
+  width: 120px; /* Taille des boutons par défaut */
+  height: 120px;
+}
+}
+
+/** PAGE S'INSCIRE***/
+
+/* Conteneur principal */
+.sinscrire-background-container {
+position: relative;
+width: 100%;
+height: auto;
+}
+
+.sinscrire-background-image {
+width: 100%;
+height: auto;
+object-fit: cover;
+position: absolute;
+z-index: -2;
+}
+
+.sinscrire-overlay-rectangle {
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 519px;
+height: auto;
+min-height: 100vh; /* Ajuste pour s'étendre sur toute la hauteur de la page */
+background-color: #FBF7EC;
+z-index: -1;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenu principal */
+.sinscrire-main-content {
+position: relative;
+z-index: 1;
+padding: 20px;
+text-align: center;
+}
+
+/* Titre principal */
+.sinscrire-title {
+font-family: 'Josefin Slab', serif;
+font-size: 24px;
+font-weight: bold;
+color: #6C8B73;
+margin-bottom: 20px;
+}
+
+/* Section formulaire */
+.sinscrire-form-section {
+display: flex;
+flex-direction: column;
+gap: 20px;
+align-items: center;
+padding: 20px;
+}
+
+.sinscrire-form-row {
+display: flex;
+gap: 20px;
+justify-content: center;
+width: 100%;
+}
+
+.sinscrire-form-group {
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+max-width: 200px;
+}
+
+.sinscrire-label {
+font-family: 'Josefin Slab', serif;
+font-size: 14px;
+color: #D46A6A;
+margin-bottom: 5px;
+}
+/* Champs de texte */
+.sinscrire-input {
+width: 100%;
+padding: 8px;
+border: 1px solid #D7D3C9;
+border-radius: 5px;
+background-color: #D7D3C9; /* Mise à jour de la couleur */
+font-size: 14px;
+font-family: 'Josefin Slab', serif;
+color: #6C8B73; /* Couleur du texte */
+}
+
+
+/* Groupement des cases à cocher */
+.sinscrire-checkbox-group {
+display: flex;
+flex-direction: column; /* Place les cases à cocher en plusieurs lignes */
+gap: 10px; /* Espacement vertical entre les cases */
+margin-top: 20px; /* Espace avec les champs au-dessus */
+padding-left: 20px; /* Aligne les cases à gauche pour commencer là où commencent les autres champs */
+max-width: 90%; /* Limite la largeur pour rester aligné avec les champs */
+box-sizing: border-box; /* Assure que padding et largeur sont pris en compte */
+
+margin-bottom: 20px; /* Augmente l'espacement global en bas du groupe */
+}
+
+
+
+/* Styles des labels */
+.sinscrire-checkbox-label {
+font-family: 'Josefin Slab', serif;
+font-size: 14px;
+color: #6C8B73;
+display: flex;
+align-items: center; /* Aligne la case avec le texte */
+text-align: left; /* Assure que le texte est aligné à gauche */
+line-height: 1.2; /* Réduit l'interligne entre les deux lignes */
+}
+
+
+/* Styles spécifiques pour la deuxième case à cocher */
+.sinscrire-checkbox-label:nth-child(2) {
+line-height: 1.2; /* Réduit l'interligne entre les lignes */
+}
+
+
+/* Styles des cases à cocher */
+.sinscrire-checkbox {
+margin-right: 10px; /* Espace entre la case et le texte */
+width: 15px; /* Taille de la case */
+height: 15px; /* Taille de la case */
+border: 1px solid #D7D3C9;
+border-radius: 3px; /* Coins légèrement arrondis */
+background-color: #D7D3C9; /* Fond beige pour l'harmonie */
+cursor: pointer; /* Curseur pointeur pour montrer que c'est cliquable */
+}
+
+
+.sinscrire-button-container {
+  text-align: center; /* Centre le bouton horizontalement */
+  margin-top: 20px; /* Ajoute un espace au-dessus */
+}
+
+.connect-button {
+  padding: 10px 20px;
+  background-color: #D46A6A; /* Couleur du bouton */
+  color: #FBF7EC; /* Couleur du texte */
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.connect-button:hover {
+  background-color: #C15454; /* Couleur légèrement plus sombre au survol */
+}
+.link-terms, .link-privacy {
+  color: #D46A6A; /* Couleur du lien */
+  text-decoration: underline; /* Style souligné pour indiquer qu'il s'agit d'un lien */
+  transition: color 0.3s ease; /* Animation au survol */
+}
+
+.link-terms:hover, .link-privacy:hover {
+  color: #C15454; /* Couleur légèrement plus sombre au survol */
+}
+
+
+/***PAGE INSCRIIPTION RETENUE/****
+
+/* Conteneur pour l'image d'arrière-plan */
+.background-container-retenue {
+position: relative;
+width: 100%;
+height: auto;
+}
+
+.background-container-retenue-image {
+width: 100%;
+height: auto;
+object-fit: cover;
+position: absolute;
+z-index: -2;
+}
+
+/* Rectangle superposé */
+.overlay-rectangle-retenue {
+position: absolute;
+top: 50px; /* Ajuste la position par rapport au haut */
+left: 50%;
+transform: translateX(-50%);
+width: 519px;
+height: 550px; /* Ajustez en fonction du contenu */
+background-color: #FBF7EC;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+z-index: -1;
+}
+
+/* Contenu principal */
+.main-content-retenue {
+position: relative;
+z-index: 1;
+text-align: center;
+padding: 50px 20px;
+}
+
+.retenue-image {
+width: 200px; /* Augmentez la taille de l'image */
+height: auto; /* Conserve les proportions */
+margin: 0 auto; /* Centre l'image */
+display: block; /* S'assure que l'image est en bloc */
+margin-bottom: 20px; /* Ajoute un espace en dessous */
+}
+
+/* Texte d'information */
+.retenue-text {
+font-family: 'Josefin Sans', sans-serif;
+font-size: 16px;
+line-height: 1.5;
+color: #6C8B73;
+text-align: center; /* Centre le texte horizontalement */
+max-width: 600px; /* Ajustez cette valeur pour contrôler la largeur */
+margin: 0 auto; /* Centre horizontalement par rapport au conteneur */
+display: flex; /* Active flexbox */
+justify-content: center; /* Centre horizontalement */
+align-items: center; /* Centre verticalement */
+height: 100%; /* Adapte la hauteur au parent */
+}
+
+/***** Responsive Design pour S'inscrire *****/
+
+/* Pour les petits écrans (smartphones) */
+@media (max-width: 768px) {
+.sinscrire-overlay-rectangle {
+  width: 90%; /* Réduit la largeur du rectangle */
+  min-height: auto; /* Ajuste la hauteur automatiquement */
+  top: 5%; /* Ajuste la position verticale */
+  transform: none; /* Supprime le décalage horizontal */
+  left: 5%; /* Aligne à gauche */
+}
+
+.sinscrire-title {
+  font-size: 20px; /* Réduit la taille du texte */
+  margin-bottom: 10px;
+}
+
+.sinscrire-form-section {
+  padding: 10px; /* Réduit l'espacement */
+  gap: 15px; /* Réduit l'espace entre les champs */
+}
+
+.sinscrire-form-group {
+  max-width: 100%; /* Les champs prennent toute la largeur */
+}
+
+.sinscrire-input {
+  width: 100%; /* Les champs occupent toute la largeur disponible */
+}
+
+.sinscrire-checkbox-group {
+  padding-left: 10px; /* Réduit le padding gauche */
+}
+
+.sinscrire-button {
+  width: 100%; /* Le bouton occupe toute la largeur */
+  font-size: 14px; /* Taille de texte réduite */
+}
+}
+
+/* Pour les tablettes */
+@media (max-width: 992px) {
+.sinscrire-overlay-rectangle {
+  width: 80%; /* Ajuste la largeur */
+  top: 8%; /* Ajuste la position verticale */
+}
+
+.sinscrire-form-group {
+  max-width: 90%; /* Les champs prennent presque toute la largeur */
+}
+
+.sinscrire-checkbox-group {
+  padding-left: 15px; /* Ajuste légèrement le padding */
+}
+}
+
+/***** Responsive Design pour Inscription Retenue *****/
+
+/* Pour les petits écrans (smartphones) */
+@media (max-width: 768px) {
+.overlay-rectangle-retenue {
+  width: 90%; /* Réduit la largeur du rectangle */
+  height: auto; /* Ajuste la hauteur automatiquement */
+  top: 10%; /* Ajuste la position verticale */
+  left: 5%; /* Aligne à gauche */
+  transform: none; /* Supprime le décalage horizontal */
+}
+
+.retenue-image {
+  width: 150px; /* Réduit la taille de l'image */
+  margin-bottom: 15px;
+}
+
+.retenue-text {
+  font-size: 14px; /* Réduit la taille du texte */
+  max-width: 90%; /* Texte plus étroit */
+}
+}
+
+/* Pour les tablettes */
+@media (max-width: 992px) {
+.overlay-rectangle-retenue {
+  width: 80%; /* Ajuste la largeur */
+  top: 8%; /* Ajuste la position verticale */
+}
+
+.retenue-text {
+  max-width: 80%; /* Texte plus large sur tablettes */
+}
+}
+
+/***** Page Favoris - Styles spécifiques *****/
+
+/* Conteneur principal */
+.favoris-background-container {
+position: relative;
+background-color: #FBF7EC;
+padding-bottom: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.favoris-background-image {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -1; /* Place l'image derrière tout le contenu */
+}
+
+/* Rectangle superposé */
+.favoris-overlay-rectangle {
+background-color: #FBF7EC;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+padding: 30px 20px;
+width: 90%;
+max-width: 1024px;
+margin-top: 20px;
+border-radius: 10px;
+}
+
+/* Titres */
+.favoris-main-title {
+font-family: "Josefin Slab", serif;
+font-size: 24px;
+color: #6C8B73;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.favoris-subtitle {
+font-family: "Josefin Slab", serif;
+font-size: 20px;
+color: #D46A6A;
+text-align: center;
+margin: 30px 0 20px 0;
+}
+
+/* Section Favoris */
+.favoris-section {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+.favoris-card {
+background-color: #FBF7EC;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+overflow: hidden;
+width: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding: 10px;
+}
+
+.favoris-card-image {
+width: 100%;
+height: 150px;
+object-fit: cover;
+}
+
+.favoris-card-title {
+font-family: "Josefin Slab", serif;
+font-size: 18px;
+color: #D46A6A;
+margin-top: 10px;
+}
+
+.favoris-card-description {
+font-family: "Josefin Slab", serif;
+font-size: 14px;
+color: #6C8B73;
+margin: 10px 0;
+}
+
+.favoris-card-rating {
+font-family: "Josefin Slab", serif;
+font-size: 14px;
+color: #FFD700;
+margin-bottom: 10px;
+}
+
+.favoris-card-button {
+background-color: #6C8B73;
+color: #FBF7EC;
+font-family: "Josefin Slab", serif;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.favoris-card-button:hover {
+background-color: #58875E;
+}
+
+/* Section Historique */
+.favoris-historique-section {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+}
+
+.favoris-historique-card {
+background-color: #FFF;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+overflow: hidden;
+width: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding: 10px;
+}
+
+.favoris-historique-card-image {
+width: 100%;
+height: 150px;
+object-fit: cover;
+}
+
+.favoris-historique-card-title {
+font-family: "Josefin Slab", serif;
+font-size: 18px;
+color: #D46A6A;
+margin-top: 10px;
+}
+
+.favoris-historique-card-date {
+font-family: "Josefin Slab", serif;
+font-size: 12px;
+color: #6C8B73;
+margin-top: 5px;
+}
+
+.favoris-historique-card-description {
+font-family: "Josefin Slab", serif;
+font-size: 14px;
+color: #6C8B73;
+margin: 10px 0;
+}
+
+.favoris-historique-card-rating {
+font-family: "Josefin Slab", serif;
+font-size: 14px;
+color: #FFD700;
+margin-bottom: 10px;
+}
+
+.favoris-historique-card-button {
+background-color: #6C8B73;
+color: #FBF7EC;
+font-family: "Josefin Slab", serif;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.favoris-historique-card-button:hover {
+background-color: #58875E;
+}
+
+/***** Responsive Design *****/
+@media screen and (max-width: 768px) {
+.favoris-card,
+.favoris-historique-card {
+    width: 100%;
+}
+}
+
+/* Page Service Client */
+
+/* Conteneur principal */
+.serviceclient-container {
+background-color: #FBF7EC;
+padding: 20px;
+position: relative;
+}
+
+/* En-tête avec image */
+.serviceclient-header {
+position: relative;
+text-align: center;
+margin-bottom: 30px;
+}
+.serviceclient-header-image {
+width: 100%;
+height: auto;
+}
+.serviceclient-title {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: 'Josefin Slab', serif;
+font-size: 36px;
+color: #6C8B73;
+background-color: rgba(255, 255, 255, 0.8);
+padding: 10px 20px;
+border-radius: 5px;
+}
+
+/* Section principale */
+.serviceclient-content {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: space-between;
+}
+
+/* Colonne */
+.serviceclient-column {
+flex: 1;
+min-width: 250px;
+}
+
+/* Section titre */
+.serviceclient-section-title {
+font-family: 'Josefin Slab', serif;
+font-size: 24px;
+color: #D46A6A;
+margin-bottom: 10px;
+}
+
+/* Accordéon */
+.serviceclient-item {
+margin-bottom: 20px;
+}
+.serviceclient-accordion {
+background-color: #FBF7EC;
+color: #6C8B73;
+cursor: pointer;
+padding: 10px;
+width: 100%;
+border: 1px solid #D46A6A;
+text-align: left;
+outline: none;
+font-family: 'Josefin Slab', serif;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+.serviceclient-accordion:hover {
+background-color: #D46A6A;
+color: #FBF7EC;
+}
+.serviceclient-panel {
+padding: 10px;
+background-color: #FBF7EC;
+display: none;
+overflow: hidden;
+color: #6C8B73;
+font-family: 'Josefin Slab', serif;
+border-left: 1px solid #D46A6A;
+border-right: 1px solid #D46A6A;
+}
+
+/* Image en bas à droite */
+.serviceclient-footer-image {
+position: absolute;
+bottom: 20px;
+right: 20px;
+width: 150px;
+height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.serviceclient-title {
+    font-size: 28px;
+}
+.serviceclient-column {
+    flex: 1 1 100%;
+}
+.serviceclient-footer-image {
+    width: 100px;
+}
+}
+
+/* Boutons accordéon */
+.serviceclient-accordion {
+background-color: #FBF7EC;
+color: #6C8B73;
+cursor: pointer;
+padding: 10px;
+border: none;
+text-align: left;
+outline: none;
+transition: 0.4s;
+}
+
+/* Style pour les boutons actifs */
+.serviceclient-accordion.active {
+font-weight: bold;
+}
+
+/* Conteneur des panneaux */
+.serviceclient-panel {
+display: none; /* Par défaut, les panneaux sont fermés */
+background-color: #FBF7EC;
+padding: 10px;
+overflow: hidden;
+border-top: 1px solid #6C8B73;
+}
+
+/* Mentions légales - Conteneur principal */
+.mentions-background-container {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0;
+margin: 0;
+}
+
+.mentions-bg-image {
+width: 100%;
+height: auto;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+}
+
+/* Rectangle superposé */
+.mentions-overlay-rectangle {
+background-color: #FBF7EC;
+width: 60%;
+margin: 80px auto;
+padding: 40px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+z-index: 2;
+}
+
+/* Titre principal */
+.mentions-title {
+font-family: 'Josefin Slab', serif;
+font-size: 32px;
+color: #6C8B73;
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* Contenu */
+.mentions-content {
+font-family: 'Josefin Slab', serif;
+font-size: 18px;
+color: #D46A6A;
+line-height: 1.8;
+}
+
+.mentions-content p {
+margin: 10px 0;
+}
+
+.mentions-content a {
+color: #6C8B73;
+text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+.mentions-overlay-rectangle {
+    width: 90%;
+    padding: 20px;
+}
+
+.mentions-title {
+    font-size: 24px;
+}
+
+.mentions-content {
+    font-size: 16px;
+}
+}
+
+/* Conteneur principal */
+.commander-container {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+margin: 0;
+}
+
+.commander-bg-image {
+width: 100%;
+height: auto;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+}
+
+/* Rectangle superposé */
+.commander-overlay {
+background-color: #FBF7EC;
+height: 1350px;
+width: 80%;
+max-width: 1200px;
+margin: 80px auto;
+padding: 40px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+}
+
+/* Section de l'article */
+.commander-article {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+margin-bottom: 30px;
+}
+
+.commander-article-image {
+max-width: 100%;
+height: auto;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+.commander-article-title {
+font-family: 'Josefin Slab', serif;
+font-size: 28px;
+color: #D46A6A;
+margin-bottom: 10px;
+}
+
+.commander-article-description {
+font-family: 'Josefin Slab', serif;
+font-size: 16px;
+color: #6C8B73;
+line-height: 1.8;
+margin-bottom: 10px;
+}
+
+.commander-article-time,
+.commander-article-price {
+font-family: 'Josefin Slab', serif;
+font-size: 18px;
+color: #6C8B73;
+margin-bottom: 5px;
+}
+
+/* Formulaire de confirmation */
+.commander-form {
+margin-top: 30px;
+}
+
+.commander-form-title {
+font-family: 'Josefin Slab', serif;
+font-size: 24px;
+color: #D46A6A;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.commander-confirmation-form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.commander-label {
+font-family: 'Josefin Slab', serif;
+font-size: 16px;
+color: #6C8B73;
+}
+
+.commander-input,
+.commander-select {
+width: 100%;
+max-width: 400px;
+padding: 10px;
+font-size: 16px;
+font-family: 'Josefin Slab', serif;
+color: #6C8B73;
+border: 1px solid #D46A6A;
+border-radius: 5px;
+margin-bottom: 10px;
+}
+
+.commander-button {
+background-color: #D46A6A;
+color: #FBF7EC;
+font-family: 'Josefin Slab', serif;
+padding: 15px 05px;
+font-size: 18px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+align-self: center;
+max-width: 200px;
+}
+
+.commander-button:hover {
+background-color: #C15454;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.commander-overlay {
+    width: 90%;
+    padding: 20px;
+}
+
+.commander-article-title {
+    font-size: 22px;
+}
+
+.commander-article-description,
+.commander-article-time,
+.commander-article-price {
+    font-size: 14px;
+}
+
+.commander-button {
+    font-size: 16px;
+    padding: 10px 15px;
+}
+}
+/* Label pour le champ de recherche */
+.pickup-label {
+font-family: 'Josefin Slab', serif;
+font-size: 18px;
+color: #D46A6A;
+margin-bottom: 10px;
+display: block;
+}
+
+/* Champ de sélection */
+.pickup-select {
+width: 100%;
+padding: 10px 15px;
+font-size: 16px;
+font-family: 'Josefin Slab', serif;
+color: #6C8B73;
+border: 1px solid #D46A6A;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+outline: none;
+}
+
+/* Focus sur le champ */
+.pickup-select:focus {
+border-color: #C15454;
+box-shadow: 0 0 5px rgba(209, 105, 105, 0.5);
+}
+
+/* Dropdown Select2 */
+.select2-container--default .select2-selection--single {
+border: 1px solid #D46A6A;
+border-radius: 5px;
+height: 40px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+font-family: 'Josefin Slab', serif;
+font-size: 16px;
+color: #6C8B73;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+height: 40px;
+}
+
+
+/* Styles pour le champ de recherche */
+.pickup-input {
+width: 100%;
+padding: 10px 15px;
+font-size: 16px;
+font-family: 'Josefin Slab', serif;
+color: #6C8B73;
+border: 1px solid #D46A6A;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+outline: none;
+}
+
+.pickup-input:focus {
+border-color: #C15454;
+box-shadow: 0 0 5px rgba(209, 105, 105, 0.5);
+}
+
+/* Styles pour la datalist */
+datalist {
+font-family: 'Josefin Slab', serif;
+}
+
+.commander-container {
+display: flex;
+gap: 20px;
+}
+
+.commander-form {
+flex: 1;
+}
+
+.commander-map {
+flex: 1;
+width: 100%;
+height: 500px; /* Ajustez selon vos besoins */
+border: 1px solid #D46A6A;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+padding-bottom: 20px;
+}
+
+/*****cartes****/
+
+.cartes-container {
+position: relative;
+text-align: center;
+font-family: 'Josefin Slab', serif;
+}
+
+.cartes-bg-image {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -1;
+}
+
+.cartes-overlay {
+background-color: rgba(251, 247, 236, 0.95);
+width: 80%;
+margin: auto;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cartes-title {
+font-size: 28px;
+color: #D46A6A;
+margin-bottom: 20px;
+}
+
+.cartes-search {
+margin-bottom: 20px;
+}
+
+.search-bar {
+width: 80%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.cartes-list {
+margin-top: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 15px;
+}
+
+.cartes-item {
+padding: 10px;
+background-color: #FBF7EC;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+text-align: left;
+}
+
+.cartes-item:hover {
+transform: scale(1.05);
+cursor: pointer;
+}
+
+.cartes-name {
+font-weight: bold;
+color: #D46A6A;
+}
+
+.cartes-location {
+color: #6C8B73;
+font-size: 14px;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+
+/***** Page Se Connecter - Nouveau CSS *****/
+
+/* Conteneur principal */
+.connect-page-container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 120px); /* Remplit entre le header et le footer */
+}
+
+.connect-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -2; /* Derrière tout le contenu */
+}
+
+/* Rectangle superposé */
+.connect-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-width: 90%;
+  background-color: #FBF7EC;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Titre principal */
+.connect-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #D46A6A;
+  margin-bottom: 20px;
+}
+
+/* Formulaire de connexion */
+.connect-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espacement entre les champs */
+}
+
+/* Labels */
+.connect-label {
+  font-family: 'Josefin Slab', serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #D46A6A;
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Champs de texte */
+.connect-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 14px;
+  color: #6C8B73;
+  background-color: #D7D3C9;
+  border: 1px solid #D46A6A;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Bouton de connexion */
+.connect-button {
+  padding: 12px 30px;
+  background-color: #D46A6A;
+  color: #FBF7EC;
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.connect-button:hover {
+  background-color: #C15454;
+}
+
+/* Lien pour le bouton */
+.connect-button-link {
+  text-decoration: none;
+}
+
+/***** Responsive Design *****/
+
+/* Smartphones */
+@media (max-width: 768px) {
+  .connect-overlay {
+    width: 90%; /* Adapte la largeur sur mobile */
+    padding: 20px;
+  }
+
+  .connect-title {
+    font-size: 20px;
+  }
+
+  .connect-input {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .connect-button {
+    width: 90%;
+    font-size: 14px;
+  }
+}
+
+/* Tablettes */
+@media (max-width: 992px) {
+  .connect-overlay {
+    width: 80%;
+  }
+
+  .connect-title {
+    font-size: 22px;
+  }
+
+  .connect-input {
+    width: 80%;
+  }
+
+  .connect-button {
+    width: 80%;
+  }
+}
+
+.scrollable-container {
+  display: flex;
+  overflow-x: auto; /* Défilement horizontal */
+  gap: 20px; /* Espacement entre les articles */
+  padding: 15px;
+  scrollbar-width: thin; /* Ajuste la largeur du scroll sur Firefox */
+  padding-bottom: 20px;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  height: 6px; /* Hauteur de la barre de défilement réduite */
+  
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: #6C8B73; /* Couleur de la barre de défilement en vert clair */
+  border-radius: 10px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background-color: #EAF3EC; /* Couleur de l'arrière-plan de la barre */
+}
+
+.offer-card,
+.recommendation-card {
+  width: 350px; /* Largeur ajustée pour être plus large */
+  flex-shrink: 0; /* Empêche les cartes de se rétrécir */
+  flex-grow: 0; /* Empêche les cartes de s'étendre */
+  background-color: #FBF7EC; /* Fond beige */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre plus subtile */
+  padding: 15px; /* Réduit le padding pour une hauteur moins importante */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+/* Images dans les cartes */
+.offer-card img,
+.recommendation-card img {
+  width: 100%; /* S'adapte à la largeur de la carte */
+  height: 180px; /* Hauteur légèrement réduite */
+  border-radius: 8px; /* Coins arrondis pour les images */
+  object-fit: cover; /* Ajuste le contenu de l'image sans déformer */
+}
+
+/* Titre des cartes */
+.offer-card .offer-title,
+.recommendation-card .offer-title {
+  font-size: 18px; /* Taille légèrement réduite */
+  font-weight: bold;
+  color: #D46A6A;
+  margin-bottom: 10px; /* Espacement réduit */
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Sous-titre des cartes */
+.offer-card .offer-subtitle,
+.recommendation-card .offer-subtitle {
+  font-size: 14px;
+  color: #6C8B73;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Cœurs interactifs */
+.offer-heart-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -10px; /* Ajuste la position */
+}
+
+.heart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.heart-button:hover {
+  transform: scale(1.2); /* Grossissement au survol */
+}
+
+/* État par défaut (contour du cœur) */
+.heart-icon {
+  width: 24px; /* Taille réduite */
+  height: 24px;
+  fill: none; /* Aucun remplissage par défaut */
+  stroke: #D46A6A; /* Contour rose */
+  stroke-width: 2px;
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+/* État rempli */
+.heart-icon.filled {
+  fill: #D46A6A; /* Remplissage rose */
+  stroke: none; /* Supprime le contour */
+}
+
+/* Boutons dans les cartes */
+.offer-card .offer-button,
+.recommendation-card .offer-button {
+  display: block;
+  width: 100%; /* Prend toute la largeur de la carte */
+  padding: 10px; /* Padding réduit pour moins de hauteur */
+  background-color: #6C8B73; /* Fond vert clair */
+  color: #FBF7EC; /* Texte en blanc */
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.offer-card .offer-button:hover,
+.recommendation-card .offer-button:hover {
+  background-color: #4A7054; /* Vert plus foncé au survol */
+}
+
+#cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #FBF7EC;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#cookie-banner p {
+  margin: 0;
+  font-size: 16px;
+  color: #6C8B73;
+}
+
+#cookie-banner a {
+  color: #D46A6A;
+  text-decoration: underline;
+}
+
+#accept-cookies {
+  margin-top: 10px;
+  background-color: #D46A6A;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Titres principaux */
+.sinscrire-title {
+  color: #6C8B73;
+  font-family: 'Josefin Slab', serif;
+}
+
+/* Sous-titres */
+.sinscrire-subtitle {
+  color: #D46A6A;
+  font-family: 'Josefin Slab', serif;
+}
+
+.sinscrire-text{
+  color: #6C8B73;
+  font-family: 'Josefin Slab', serif;
+}
